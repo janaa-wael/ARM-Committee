@@ -1,7 +1,7 @@
 /*********************************************************************************/
-/* Author    : ARM Committee, SemiColon Team                                                        */
-/* Version   : V01                                                               */
-/* Date      : 6 February 2025                                                    */
+/* Author    : ARM Committee, SemiColon Team                                     */
+/* Version   : V02                                                               */
+/* Date      : 6 February 2025                                                   */
 /*********************************************************************************/
 
 #ifndef SYSTICK_PRIVATE_H_

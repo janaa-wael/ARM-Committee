@@ -1,7 +1,7 @@
 /*********************************************************************************/
-/* Author    : ARM Committee, SemiColon Team                                                        */
-/* Version   : V01                                                               */
-/* Date      : 6 February 2025                                                    */
+/* Author    : ARM Committee, SemiColon Team                                     */
+/* Version   : V02                                                               */
+/* Date      : 6 February 2025                                                   */
 /*********************************************************************************/
 
 #ifndef SYSTICK_INTERFACE_H_
@@ -24,5 +24,6 @@ u8 MSTK_u8ReadFlag(void);
 void MSTK_VidSetCallBack(void (*ptr)(void));
 
 void MSTK_VidClearCurrentValue(void);
+
 
 #endif /* SYSTICK_INTERFACE_H_ */
