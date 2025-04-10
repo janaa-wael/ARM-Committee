@@ -58,6 +58,7 @@
 void MGPIO_VidSetPinDirection  ( u8 Copy_u8Port , u8 Copy_u8Pin , u8 u8Copy_u8Mode  );
 void MGPIO_VidSetPinValue      ( u8 Copy_u8Port , u8 Copy_u8Pin , u8 u8Copy_u8Value );
 u8   MGPIO_u8GetPinValue       ( u8 Copy_u8Port , u8 Copy_u8Pin                     );
+void MGPIO_VidTogglePinValue( u8 Copy_u8Port , u8 Copy_u8Pin);
 
 
 #endif
