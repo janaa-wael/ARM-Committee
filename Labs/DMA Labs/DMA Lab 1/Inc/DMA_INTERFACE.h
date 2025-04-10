@@ -7,6 +7,18 @@
 #ifndef DMA_INTERFACE_H_
 #define DMA_INTERFACE_H_
 
+
+typedef struct{
+	u8 Copy_u8Channel;
+	u8 Copy_u8Direction;
+	u8 Copy_u8DMAMode;
+	u8 Copy_u8PINC;
+    u8 Copy_u8MINC;
+	u8 Copy_MEMSize;
+	u8 Copy_u8PERSize;
+	u8 Copy_u8ChannelPriority;
+} DMA_Configurations;
+
 //DMA Flags
 #define DMA_GIF   0
 #define DMA_TCIF  1
@@ -52,8 +64,8 @@
 #define DMA_VERY_HIGH   3
 
 
-void MDMA_VidSetConfiguration( u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8DMAMode , u8 Copy_u8PINC ,
-		u8 Copy_u8MINC , u8 Copy_MEMSize , u8 Copy_u8PERSize , u8 Copy_u8ChannelPriority );
+
+void MDMA_VidSetConfiguration(DMA_Configurations* DMA_Config);
 
 void MDMA_VidDMAEnable( u8 Copy_u8Channel );
 
