@@ -7,6 +7,18 @@
 #ifndef DMA_INTERFACE_H_
 #define DMA_INTERFACE_H_
 
+
+typedef struct{
+	u8 Copy_u8Channel;
+	u8 Copy_u8Direction;
+	u8 Copy_u8DMAMode;
+	u8 Copy_u8PINC;
+    u8 Copy_u8MINC;
+	u8 Copy_MEMSize;
+	u8 Copy_u8PERSize;
+	u8 Copy_u8ChannelPriority;
+} DMA_Configurations;
+
 //DMA Flags
 #define DMA_GIF   0
 #define DMA_TCIF  1
@@ -52,22 +64,22 @@
 #define DMA_VERY_HIGH   3
 
 
-void MDMA_VidSetConfiguration( u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8DMAMode , u8 Copy_u8PINC ,
-		u8 Copy_u8MINC , u8 Copy_MEMSize , u8 Copy_u8PERSize , u8 Copy_u8ChannelPriority );
 
-void MDMA_VidDMAEnable(u8 Copy_u8Channel);
+void MDMA_VidSetConfiguration(DMA_Configurations* DMA_Config);
 
-void MDMA_VidDMADisable(u8 Copy_u8Channel);
+void MDMA_VidDMAEnable( u8 Copy_u8Channel );
 
-void MDMA_VidInerruptEnable(u8 Copy_u8Channel , u8 Copy_u8INTSource);
+void MDMA_VidDMADisable( u8 Copy_u8Channel );
 
-void MDMA_VidSetAddress(u8 Copy_u8Channel, u32 * PeripheralAddress, u32 * MemoryAddress, u16 Copy_u16NDT);
+void MDMA_VidInerruptEnable( u8 Copy_u8Channel , u8 Copy_u8INTSource );
 
-void MDMA_VidClearFlag(u8 Copy_u8Channel, u8 Copy_u8Flag);
+void MDMA_VidSetAddress( u8 Copy_u8Channel , u32 * PeripheralAddress , u32 * MemoryAddress , u16 Copy_u16NDT );
 
-u8   MDMA_u8GetFlag(u8 Copy_u8Channel, u8 Copy_u8Flag);
+void MDMA_VidClearFlag( u8 Copy_u8Channel , u8 Copy_u8Flag );
 
-void MDMA_VidSetCallBackChannel1(void (*Ptr) (void));
+u8   MDMA_u8GetFlag( u8 Copy_u8Channel , u8 Copy_u8Flag );
+
+void MDMA_VidSetCallBackChannel1( void ( *Ptr ) ( void ) );
 
 
 #endif /* DMA_INTERFACE_H_ */

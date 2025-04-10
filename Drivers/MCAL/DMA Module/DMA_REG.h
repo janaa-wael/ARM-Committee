@@ -26,6 +26,9 @@ typedef struct{
 
 }DMA;
 
+
+
+
 #define MDMA ( ( volatile DMA * ) 0x40020000 )
 
 
